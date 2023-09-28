@@ -5,8 +5,3 @@ Scripts:
 
 Game Objects:
 
-golf club
-
-ball
-
-terrain
