@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ResetBall : MonoBehaviour
 {
     [SerializeField] Vector2 startposition;
+     Quaternion defrotation;
     //amount of frames that the ball has stopped
     float timestopped = 0;
     Rigidbody2D rigidb;
@@ -13,6 +15,7 @@ public class ResetBall : MonoBehaviour
     {
         rigidb = GetComponent<Rigidbody2D>();
         startposition = (Vector2)transform.position;
+        defrotation = transform.rotation;
     }
 
     //check if ball has stopped for a certain amount of frames
@@ -28,6 +31,8 @@ public class ResetBall : MonoBehaviour
    void OnBecameInvisible()
    {
     transform.position = startposition;
+    transform.rotation = defrotation;
+    rigidb.velocity = new Vector2(0, 0);
     timestopped = 0;
    }
 
@@ -36,6 +41,8 @@ public class ResetBall : MonoBehaviour
     void Update()
     {
         if (Stopped() && timestopped == 1000f) {
+           rigidb.velocity = new Vector2(0, 0);
+           transform.rotation = defrotation;
            rigidb.velocity = new Vector2(0, 0);
            transform.position = startposition;
            timestopped = 0;
