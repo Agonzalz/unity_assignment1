@@ -13,8 +13,11 @@ EditorBuildSettings:
     guid: 09e10cc2db7e14d5a9c3d03cbb8040af
   - enabled: 1
     path: Assets/Scenes/Hole1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 0a4fd45c5d0bb574eb5ceb0ea063f5b1
   - enabled: 1
     path: Assets/Scenes/Hole 2.unity
     guid: 2934a02e2c04845bca54be6a0c3035e9
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
