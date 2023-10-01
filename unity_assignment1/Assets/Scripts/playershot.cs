@@ -13,12 +13,10 @@ public class playershot : MonoBehaviour
    [SerializeField] Vector2 startposition;
    bool dragging; 
 
+   //conditional for when player can input again. 
    void Drag() {
-      if (rigidb.velocity.magnitude >= 0.5f) {
-         dragging = false;
-      }else {
-      dragging = true;
-      }
+      if (rigidb.velocity.magnitude > 0f) { dragging = false; }
+      else { dragging = true; }
     }
    void Dragmove() {
 
