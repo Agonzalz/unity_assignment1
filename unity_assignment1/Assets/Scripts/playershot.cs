@@ -14,8 +14,11 @@ public class playershot : MonoBehaviour
    bool dragging; 
 
    void Drag() {
+      if (rigidb.velocity.magnitude >= 0.5f) {
+         dragging = false;
+      }else {
       dragging = true;
-
+      }
     }
    void Dragmove() {
 
