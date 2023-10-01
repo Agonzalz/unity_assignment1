@@ -5,17 +5,16 @@ using UnityEngine;
 
 public class ResetBall : MonoBehaviour
 {
-    [SerializeField] Vector2 startposition;
-     Quaternion defrotation;
+    [SerializeField] private Vector2 startposition;
+    [SerializeField] private float max_frames = 1000f;
     //amount of frames that the ball has stopped
-    float timestopped = 0;
-    Rigidbody2D rigidb;
+    private float timestopped = 0;
+    private Rigidbody2D rigidb;
     // Start is called before the first frame update
     void Start()
     {
         rigidb = GetComponent<Rigidbody2D>();
         startposition = (Vector2)transform.position;
-        defrotation = transform.rotation;
     }
 
     //check if ball has stopped for a certain amount of frames
@@ -30,22 +29,23 @@ public class ResetBall : MonoBehaviour
 
    void OnBecameInvisible()
    {
-    transform.position = startposition;
-    transform.rotation = defrotation;
-    rigidb.velocity = new Vector2(0, 0);
+    //transform.rotation = defrotation;
+    rigidb.velocity = Vector3.zero;
+    rigidb.angularVelocity = 0;
     timestopped = 0;
+    transform.position = startposition;
+    
    }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Stopped() && timestopped == 1000f) {
-           rigidb.velocity = new Vector2(0, 0);
-           transform.rotation = defrotation;
-           rigidb.velocity = new Vector2(0, 0);
-           transform.position = startposition;
+        if (Stopped() && timestopped == max_frames) {
+           rigidb.velocity = Vector3.zero;
+           rigidb.angularVelocity = 0;
            timestopped = 0;
+           transform.position = startposition;
         }
     }
 }
