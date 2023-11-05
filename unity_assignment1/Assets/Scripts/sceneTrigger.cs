@@ -9,7 +9,7 @@ public class sceneTrigger : MonoBehaviour
     {
         if (other.gameObject.name == "GolfBall") {
             Debug.Log("collison");
-            SceneManager.LoadScene(sceneName: "Hole 2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

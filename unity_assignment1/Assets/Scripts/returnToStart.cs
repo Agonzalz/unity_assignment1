@@ -9,7 +9,7 @@ public class returnToStart : MonoBehaviour
     {
         if (other.gameObject.name == "GolfBall") {
             Debug.Log("collison");
-            SceneManager.LoadScene(sceneName: "WelcomeScreen");
+            Sceneswitcher.Mainmenu();
         }
     }
 
