@@ -20,6 +20,11 @@ public class Sceneswitcher : MonoBehaviour
         SceneManager.LoadScene("Hole3");
     }
 
+      public static void Level_4()
+    {
+        SceneManager.LoadScene("Hole4");
+    }
+
     public static void Mainmenu()
     { 
         SceneManager.LoadScene("WelcomeScreen");
