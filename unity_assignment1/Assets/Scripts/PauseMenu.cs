@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool ispaused = false;
     public GameObject pause_menu;
+
+    [SerializeField] public GameObject golfball;
     
     
    public void Resume()
@@ -69,4 +71,8 @@ public class PauseMenu : MonoBehaviour
         Pause();
     }
 
+    public void Reset_button()
+    {
+        golfball.GetComponent<ResetBall>().Reset();
+    }
 }

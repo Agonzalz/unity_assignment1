@@ -7,8 +7,8 @@ public class playershot : MonoBehaviour
    [SerializeField] private Rigidbody2D rigidb;
    //will add line visual for direction 
    //[SerializeField] private LineRenderer line;
-   [SerializeField] private float maxvelocity = 10f; 
-   [SerializeField] private float velocity = 1f;
+   [SerializeField] private float maxvelocity = 15f; 
+   [SerializeField] private float velocity = 1.5f;
    private bool dragging; 
 
    //conditional for when player can input again. 

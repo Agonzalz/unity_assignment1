@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class sceneTrigger : MonoBehaviour
+public class speedBoost : MonoBehaviour
 {
     public AudioSource audioPlayer;
+
+    private float speed =7f;
     
-    //Two second delay 
-    public float delayTime = .25f;
-    //GameObject.Find("GameMusic");
     void OnCollisionEnter2D(Collision2D other)
     {
+
         if (other.gameObject.name == "GolfBall") {
+            other.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * speed, ForceMode2D.Impulse);
             Debug.Log("collison");
             audioPlayer.Play();
-            //Delay Scene Switch to play music 
-            Invoke("DelayedAction", delayTime);
             }
-    }
-
-    void DelayedAction(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
