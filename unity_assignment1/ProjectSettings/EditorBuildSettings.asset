@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WelcomeScreen - Copy.unity
     guid: aac271e2d48193c4e94058afcb4a0d17
+  - enabled: 1
+    path: Assets/Scenes/instructions.unity
+    guid: abfc2c5fe3aa54d1d9ab31d98d7404e4
   m_configObjects: {}
