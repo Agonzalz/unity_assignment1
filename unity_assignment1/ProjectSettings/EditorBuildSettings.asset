@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Hole4.unity
     guid: 7ce7d7bc1101f4f59b2e50013b802f93
   - enabled: 1
+    path: Assets/Scenes/Hole5.unity
+    guid: 993406f81e0f4f1479a02ee8c95e8834
+  - enabled: 1
     path: Assets/Scenes/WelcomeScreen - Copy.unity
     guid: aac271e2d48193c4e94058afcb4a0d17
   - enabled: 1
