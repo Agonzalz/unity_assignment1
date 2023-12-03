@@ -462,22 +462,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4203230887509715161, guid: 884386e4c97040c4e9da02b31103abbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 884386e4c97040c4e9da02b31103abbd, type: 3}
---- !u!114 &261703172 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2497083595431131788, guid: 884386e4c97040c4e9da02b31103abbd, type: 3}
-  m_PrefabInstance: {fileID: 261703171}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &261703173 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3264592663965252514, guid: 884386e4c97040c4e9da02b31103abbd, type: 3}
@@ -1188,8 +1181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7c98c4a13cf4e49953ad08d29c1688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attemptUI: {fileID: 261703172}
-  attempts: 0
 --- !u!1 &912403623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2396,6 +2387,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6765802924148762660, guid: 5f632e75d5d4e064789c8369fa4b34c6, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6872913203676401662, guid: 5f632e75d5d4e064789c8369fa4b34c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.03

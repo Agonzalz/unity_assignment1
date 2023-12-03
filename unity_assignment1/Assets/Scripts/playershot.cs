@@ -32,7 +32,7 @@ public class playershot : MonoBehaviour
       float dist = Vector2.Distance(transform.position, endposition); 
       if (dist < 0.5f) { return; }
       
-      GameManager.current.IncreaseAttempts();
+     // GameManager.current.IncreaseAttempts();
       Vector2 direction = (Vector2)transform.position - endposition;
       //makes sure velocity isn't too much to send ball flying out of bounds
       rigidb.velocity = Vector2.ClampMagnitude(direction * velocity, maxvelocity);

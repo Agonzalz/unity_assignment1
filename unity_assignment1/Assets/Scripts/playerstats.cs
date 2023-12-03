@@ -5,13 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerStats
 {
-    public int attempts;
+   // public int attempts;
     public string current_level;
     public int max_level;
 
-    public PlayerStats(string level, int tries)
+    public PlayerStats(string level)
     {
         current_level = level;
-        attempts = tries;
+        //attempts = tries;
     }
 }

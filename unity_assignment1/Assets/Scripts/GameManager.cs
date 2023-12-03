@@ -8,17 +8,20 @@ using UnityEngine.UIElements;
 public class GameManager : MonoBehaviour
 {   
     public static GameManager current;
-    [SerializeField] private TextMeshProUGUI attemptUI;
-    public int attempts;
+    
+    //Need to fix bug with updating attmpt number in first two levels
+    //[SerializeField] private TextMeshProUGUI attemptUI;
+    //public int attempts;
 
     //when clicking the save button
     public static void Save() 
     {
-        SaveSystem.SaveJson(new PlayerStats(SceneManager.GetActiveScene().name, current.attempts));
+        SaveSystem.SaveJson(new PlayerStats(SceneManager.GetActiveScene().name));
 
     }
 
-    public void CheckSave() {
+    ////////////// Attmept number UI //////////////////////////////////
+    /*public void CheckSave() {
         PlayerStats player = SaveSystem.LoadJson();
         if (player.current_level == SceneManager.GetActiveScene().name) {
             current.attempts = player.attempts;
@@ -36,21 +39,24 @@ public class GameManager : MonoBehaviour
         attemptUI.text = "Attempts: " + attempts;   
     
     }
-
+    */
+    ////////////////////////////////////////////////////////////////////
+   
     private void Awake()
     {
-       
+      current = this; 
     }
 
     void Start()
-    {     
-        current = this;
-         if (attemptUI == null)
+    {   
+        
+        /*if (attemptUI == null)
         {
             Debug.LogError("TextMeshProUGUI component is not assigned in GameManager.");
         }
         CheckSave();
         UpdateAttempt();
+        */
     }
     
 }
